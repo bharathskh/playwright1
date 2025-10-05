@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  sut:
+    build: .
+    volumes:
+      - ./:/work
+    environment:
+      - NODE_ENV=qa
+    command: ["npx", "playwright", "test"]
